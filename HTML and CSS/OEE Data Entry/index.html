@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบคำนวณ OEE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ระบบคำนวณ OEE</h1>
+
+        <form id="oeeForm">
+            <label for="totalTime">เวลาทั้งหมด (ชั่วโมง):</label>
+            <input type="number" id="totalTime" name="totalTime" required>
+
+            <label for="operatingTime">เวลาทำงาน (ชั่วโมง):</label>
+            <input type="number" id="operatingTime" name="operatingTime" required>
+
+            <label for="downtime">เวลาหยุดเครื่องจักร (ชั่วโมง):</label>
+            <input type="number" id="downtime" name="downtime" required>
+
+            <label for="goodProduction">ปริมาณการผลิตที่ดี (ชิ้น):</label>
+            <input type="number" id="goodProduction" name="goodProduction" required>
+
+            <button type="submit">คำนวณ OEE</button>
+        </form>
+
+        <div id="oeeResult">
+            <h2>ผลลัพธ์ OEE</h2>
+            <p id="oee"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
